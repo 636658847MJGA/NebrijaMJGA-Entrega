@@ -1,0 +1,144 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #00A29E;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+	width: 100vw;
+	height: 100vh;
+	margin: 10px;
+
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 5fr 1fr;
+	grid-template-rows: 2fr repeat(6, 1fr);
+	grid-template-areas: 
+		".  	header 		sidebar"
+		"anadir contenido 	sidebar"
+		"buscar contenido 	sidebar"
+		"editar contenido 	sidebar"
+		"borrar contenido 	sidebar"
+		". 		contenido 	."
+		". 		footer 		.";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	border-radius: 4px;
+}
+
+.contenedor .header {
+	background: #006462;
+	color:white;
+	grid-area: header;
+	padding-top: 5vh ;
+    align-items: center;
+	text-align: center;
+	
+	
+	/*.nav_figure{
+	width: 15%;
+	height: 7%;
+	flex-wrap: wrap;
+	/*display: flex;
+	flex-direction: column;
+	/*align-items: center;*/
+    /*justify-content: space-around;
+	}*/
+}
+
+.contenedor .contenido {
+	color:#006462;
+	grid-area: contenido;
+    padding: 15px;
+	overflow: scroll;
+}
+
+.contenedor .sidebar {
+	background: #006462;
+	color:white;
+	grid-area: sidebar;
+	padding-top: 2vh;
+	margin-right: 2vw;
+	justify-content: center;
+    flex-direction: column;
+	text-align: center;
+	
+	
+}
+
+.contenedor .anadir,
+.contenedor .buscar,
+.contenedor .editar, 
+.contenedor .borrar {
+	background: #006462;
+	color:white;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .anadir {
+	grid-area: anadir;
+}
+
+.contenedor .buscar {
+	grid-area: buscar;
+}
+
+.contenedor .editar {
+	grid-area: editar;
+}
+
+.contenedor .borrar {
+	grid-area: borrar;
+}
+
+.contenedor .footer {
+	background: #006462;
+	color:white;
+	grid-area: footer;
+	padding: 5vh;
+	text-align: center;
+
+	/*.footer_fig{
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	width: 15%;
+	height: 5%;
+	align-items: center;
+	justify-content: center;}*/
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		margin: 5px;
+		background-color: #000;
+		grid-template-areas: 
+		"header	  header 	  header"
+		"anadir   contenido   contenido"
+		"buscar   contenido   contenido"
+        "editar   contenido   contenido"
+        "borrar   contenido   contenido"
+		"sidebar  sidebar     sidebar"
+		".        footer      .";
+
+		.contenedor .contenido {
+			grid-area: contenido;
+			overflow: scroll;
+		}
+	}
+}

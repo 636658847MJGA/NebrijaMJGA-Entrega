@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ImagenesWeb/MiLogo.png">
+    <link rel="stylesheet" href="styles_0.css">
+    <title>Inicialización de contraseñas de empresa</title>
+</head>
+<body>
+	<div class="contenedor">
+		<header class="header">
+            <nav>
+                <h2> <!-- Se pospone para futuras implementaciones
+                     los enlaces a otras páginas de esta app -->
+                     <!-- href="Precarga datos de empresa"--><a>Datos empresa /</a>
+                     <!-- href="Precarga datos de representantes"--><a>Datos representantes /</a>
+                     <!-- href="Precarga datos de convenios"--><a>Datos convenios /</a>
+                     <!-- href="Respuestas"--><a>Respuestas </a>
+                </h2>
+
+               <!-- Se pospone para futuras implementaciones el uso de imágenes
+                <figure>
+                    <img class="nav_figure" src="ImagenesWeb/ActivoBotonPrecargaEmpresas.png" 
+                        alt="Botón precarga de contraseñas iniciales para empresas"
+                        title="Menú activo de precarga de contraseñas inciales para empresas">
+                </figure>
+                <figure>
+                    <img class="nav_figure" src="ImagenesWeb/InactivoBotonPrecargaRepresentantes.png" 
+                        alt="Botón precarga de datos de representantes"
+                        title="Enlace a precarga de contraseñas inciales para empresas">
+                </figure>
+                <figure>
+                    <img class="nav_figure" src="ImagenesWeb/InactivoBotonConvenios.png" 
+                        alt="Botón menú de convenios"
+                        title="Enlace a menú de convenios">
+                </figure>
+                <figure>
+                    <img class="nav_figure" src="ImagenesWeb/InactivoBotonRespuestas.png" 
+                        alt="Botón menú de respuesta a dudas planteadas"
+                        title="Enlace a menú de respuesta a dudas planteadas">
+                </figure>
+                -->
+            </nav>
+            <br><br>
+            <div class="migas">
+                <h5>
+                    <a href="AppInicio"_blank>Inicio / </a>
+                    <a href="AppPrecargaDatosEmpresa"_blank>Precarga datos Empresa / </a>
+                    <a href="InicializacionContraseniasVistaApp.html"_blank>Precarga contraseñas iniciales empresa  </a>
+                </h5>
+            </div>
+		</header>
+		<main class="contenido">
+			<h1>Formulario para generar las contraseñas iniciales de las empresas</h1>
+			     <!-- Enlace con el servlet y métod de envío de la información -->
+			     <form action="Servlet_0" method="post">
+                    <br>
+                    <table>
+                        <tr>
+                        <td width ="10px"></td>
+                        <td><label for="NIFempresa">NIF de la empresa: </label> </td>
+                        <td><input type="text" id="NIFempresa" name="empresaNIF"></td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <td width ="5px"></td>
+                        <td><label for="ContraseniaInicialEmpresa">Contraseña inicial para la empresa: </label></td>
+                        <td><input type="text" id="ContraseniaInicialEmpresa" name="empresaContrasenia"></td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <h4>Por favor, introduzca el Logotipo de la empresa</h4><br>
+                    <div>
+						<label>Adjuntar archivo</label>
+					    <input type="file" name="logotipo" 
+                            alt="Enlace para guardar el logotipo de la empresa"
+                            title="Se indicará aquí el enlace a la imagen del logotipo de la empresa">
+                            <br><br>
+                    </div>
+                    <input type="submit" value="Guardar información">
+                           
+                    <input type="reset" value="Limpiar el formulario"><br><br>
+                </form><br>
+            <br>
+            <h2>Texto aclaratorio</h2><br>
+            <p> La finalidad de este formulario es facilitar los datos básicos para inicializar las contraseñas de empresa y el logotipo de la misma. 
+                Tras guardar la información, la empresa queda dada de alta en el sistema. 
+                Se le asigna una contraseña inicial, que será comunicada a la persona que actúe en nombre de la empresa.
+                Una vez que la reciba, tendrá que cambiarla por una propia. 
+                Le dará acceso para que realice las funciones que establece el convenio firmado con la Gestora
+                <a class="masInfo" href="ManualdeUso" 
+                alt="Enlace a manual de uso completo"
+                title="Enlace a manual de uso completo">(+ info)</a></p>
+            
+        </main>
+		<aside class="sidebar">
+			<figure>
+                <img class="logoGes" src="ImagenesWeb/LogoGestora.png" 
+                     alt="Logo de la Gestora"
+                     title="Botón con el que añadir otra empresa">
+            </figure>
+            <h2>
+                <br><br>
+                <!-- Se pospone para futuras implementaciones
+                los enlaces a otras páginas de esta app -->
+                <!-- href="Acceso a la Legislación"--><a>Legislación</a>
+                <br><br>
+                <!-- href="Acceso a Manual de Uso"--><a>Manual de uso</a>
+                
+            </h2>
+            <!-- Se pospone para futuras implementaciones el uso de imágenes
+             <figure>
+                <img class="aside_R_figure" src="ImagenesWeb/BotonLegislacion.png" 
+                     alt="Botón con enlace a la Legislación Aplicable"
+                     title="Botón con enlace a la Legislación Aplicable">
+            </figure>
+            <figure>
+                <img class="aside_R_figure" src="ImagenesWeb/BotonManualUsuario.png" 
+                     alt="Botón de acceso al Manual de Usuario completo"
+                     title="Botón de acceso al Manual de Usuario completo">
+            </figure>-->
+		</aside>
+		<div class="anadir">
+			<h3>AÑADIR</h3>
+		</div>
+		<div class="buscar">
+			<h3>BUSCAR</h3>
+		</div>
+        <div class="editar">
+			<h3>EDITAR</h3>
+		</div>
+		<div class="borrar">
+			<h3>BORRAR</h3>
+		</div>
+		<footer class="footer">
+			<!-- Se pospone para futuras implementaciones el uso de imágenes
+             <figure>
+                <img class="footer_fig" src="ImagenesWeb/footerGuiaNavegacion.png" 
+                     alt="Enlace a la Guía de navegación de la App"
+                     title="Enlace a la Guía de navegación de la App"
+                     href="AppGuiaNavegacion" 
+                     >
+            </figure>
+            <figure>
+                <img class="footer_fig" src="ImagenesWeb/footerAccesibilidad.png" 
+                     alt="Enlace a la página de accesibilidad de la App"
+                     title="Enlace a la página de accesibilidad de la App"
+                     href="AppAccesibilidad" 
+                     >
+            </figure>
+            <figure>
+                <img class="footer_fig" src="ImagenesWeb/footerAvisoLegal.png" 
+                     alt="Enlace a la página del Aviso Legal de la App"
+                     title="Enlace a la página del Aviso Legal de la App"
+                     href="AppAvisoLegal" 
+                     >
+            </figure>
+            <figure>
+                <img class="footer_fig" src="ImagenesWeb/footerRGPD.png" 
+                     alt="Enlace a la página de protección de los datos en la App"
+                     title="Enlace a la página de protección de datos en la App"
+                     href="AppProteccionDatos" 
+                     >
+            </figure>
+            <figure>
+                <img class="footer_fig" src="ImagenesWeb/footerInicio.png" 
+                     alt="Enlace a la página de inicio de la App"
+                     title="Enlace a la página de inicio de la App"
+                     href="AppInicio" 
+                     >
+            </figure> -->
+            <h3> <!-- Se pospone para futuras implementaciones
+                los enlaces a otras páginas de esta app -->
+                <!-- href="AppGuiaNavegacion"--><a>Guía de navegación /</a>
+                <!-- href="AppAccesibilidad"--><a>Accesibilidad /</a>
+                <!-- href="AppAvisoLegal"--><a>Aviso Legal /</a>
+                <!-- href="AppProteccionDatos"--><a>Protección de datos </a>
+                <!-- href="AppInicio"--><a>Inicio </a>
+           </h3>
+		</footer>
+	</div>
+</body>
+</html>
